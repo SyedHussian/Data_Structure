@@ -3,6 +3,8 @@ package hashing;
 public class LinearProbingMain {
 
 	public static void main(String[] args) {
+		System.out.println("Linear Probing...\n");
+		
 		LinearProbing linearProbing = new LinearProbing();
 
 

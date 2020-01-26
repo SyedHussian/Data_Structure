@@ -3,6 +3,9 @@ package hashing;
 public class DirectChainingMain {
 
 	public static void main(String[] args) {
+		
+		System.out.println("Diriect Chaining...\n");
+		
 		DirectChaining directChaining = new DirectChaining();
 
 		directChaining.insertKeyInHashTable("The");
