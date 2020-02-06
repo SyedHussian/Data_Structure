@@ -112,9 +112,7 @@ public class Sort {
 		}
 		
 	}
-	
-	
-	
+
 	public void mergeSort(int[] array, int left, int right) {
 		if (right > left) {
 			int middle = (left+right)/2;
@@ -153,6 +151,26 @@ public class Sort {
 	}
 	
 	
+	public void quickSort(int[] array, int start, int end) {
+		if (start < end) {
+			int pivot = partition(array, start, end);
+			quickSort(array, start, pivot-1);
+			quickSort(array, pivot+1, end);
+		}
+	}
+	
+	public int partition(int[] array, int start, int pivote) {
+		int i = start-1;
+		for (int j=start; j<=pivote; j++) {
+			if (array[j] <= array[pivote]) {
+				i++;
+				int temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+		}
+		return i;
+	}
 	
 	
 	

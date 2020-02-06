@@ -79,19 +79,31 @@ public class SortMain {
 		
 		//--------------------------- Merge Sorting ----------------//
 
-		int array[] = {10, 3, 2, 5, 8, 4, 3, 1, 2, 9, 7, 8};
+//		int array[] = {10, 3, 2, 5, 8, 4, 3, 1, 2, 9, 7, 8};
+//		
+//		System.out.println("User entered Array: ");
+//		sort.printArray(array);
+//		
+//		long start = System.nanoTime();
+//		sort.mergeSort(array, 0, array.length-1);
+//		long end = System.nanoTime();
+//		System.out.println("\n\nTime to execute this algo: " + (end-start));
+//		
+//		System.out.println("\nAfter sorting: ");
+//		sort.printArray(array);
+
+		
+		//--------------------------- Quick Sorting ----------------//
+		int array[] = {10, 3, 2, 7, 7, 5, 8, 4, 1, 2, 9, 7, 8, 11};
 		
 		System.out.println("User entered Array: ");
 		sort.printArray(array);
 		
-		long start = System.nanoTime();
-		sort.mergeSort(array, 0, array.length-1);
-		long end = System.nanoTime();
-		System.out.println("\n\nTime to execute this algo: " + (end-start));
+		sort.quickSort(array, 0, array.length-1);
 		
-		System.out.println("\nAfter sorting: ");
+		System.out.println("\n\nAfter sorting: ");
 		sort.printArray(array);
-
+		
 	}
 	
 }
