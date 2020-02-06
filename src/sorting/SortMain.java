@@ -8,9 +8,15 @@ public class SortMain {
 		Sort sort = new Sort();
 		
 //		final long start1 = System.nanoTime();
+		
+		Sort sort = new Sort();
+
 //		
 //		System.out.println("Bubble Sort........");
+<<<<<<< HEAD
 
+=======
+>>>>>>> test
 //		int[] bArr = { 10, 5, 30, 15, 50, 6 };
 //		System.out.println("Array to be sorted using Bubble sort...");
 //		sort.printArray(bArr);
@@ -55,7 +61,11 @@ public class SortMain {
 //		System.out.println("-----------------------------");
 //		
 		
+<<<<<<< HEAD
 ////--------------------------- Bucket Sorting --------------------//
+=======
+		//--------------------------- Bucket Sorting ----------------//
+>>>>>>> test
 //		int arr[] = new int[100];
 //		
 //		//Generating 100 random numbers in the range of 0-100
@@ -74,6 +84,7 @@ public class SortMain {
 //		
 //		System.out.println("\n\nArray after Sorting: ");
 //		bs.printArray(arr);
+<<<<<<< HEAD
 
 ////--------------------------- Merge Sorting --------------------//
 		
@@ -88,6 +99,35 @@ public class SortMain {
 		System.out.println("\n\nTime to execute this algo: " + (end-start));
 		
 		System.out.println("\nAfter sorting: ");
+=======
+		
+		
+		//--------------------------- Merge Sorting ----------------//
+
+//		int array[] = {10, 3, 2, 5, 8, 4, 3, 1, 2, 9, 7, 8};
+//		
+//		System.out.println("User entered Array: ");
+//		sort.printArray(array);
+//		
+//		long start = System.nanoTime();
+//		sort.mergeSort(array, 0, array.length-1);
+//		long end = System.nanoTime();
+//		System.out.println("\n\nTime to execute this algo: " + (end-start));
+//		
+//		System.out.println("\nAfter sorting: ");
+//		sort.printArray(array);
+
+		
+		//--------------------------- Quick Sorting ----------------//
+		int array[] = {10, 3, 2, 7, 7, 5, 8, 4, 1, 2, 9, 7, 8, 11};
+		
+		System.out.println("User entered Array: ");
+		sort.printArray(array);
+		
+		sort.quickSort(array, 0, array.length-1);
+		
+		System.out.println("\n\nAfter sorting: ");
+>>>>>>> test
 		sort.printArray(array);
 		
 	}

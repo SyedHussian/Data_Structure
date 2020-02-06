@@ -112,6 +112,67 @@ public class Sort {
 		}
 		
 	}
+
+	public void mergeSort(int[] array, int left, int right) {
+		if (right > left) {
+			int middle = (left+right)/2;
+			mergeSort(array, left, middle);
+			mergeSort(array, middle+1, right);
+			merge(array, left, middle, right);
+		}
+	}
+	
+	public void merge(int[] array, int left, int middle, int right) {
+		int[] leftTempArray = new int[middle-left+2];
+		int[] rightTempArray = new int[right-middle+1];
+		
+		for (int i=0; i<=middle-left; i++) {
+			leftTempArray[i] = array[left+i];
+		}
+		for (int i=0; i<right-middle; i++) {
+			rightTempArray[i] = array[middle+1+i];
+		}
+		
+		leftTempArray[middle-left+1] = Integer.MAX_VALUE;
+		rightTempArray[right-middle] = Integer.MAX_VALUE;
+		
+		int i=0, j=0;
+		
+		for (int k=left; k<=right; k++) {
+			if (leftTempArray[i] < rightTempArray[j]) {
+				array[k] = leftTempArray[i];
+				i++;
+			}
+			else {
+				array[k] = rightTempArray[j];
+				j++;
+			}
+		}
+	}
+	
+	
+	public void quickSort(int[] array, int start, int end) {
+		if (start < end) {
+			int pivot = partition(array, start, end);
+			quickSort(array, start, pivot-1);
+			quickSort(array, pivot+1, end);
+		}
+	}
+	
+	public int partition(int[] array, int start, int pivote) {
+		int i = start-1;
+		for (int j=start; j<=pivote; j++) {
+			if (array[j] <= array[pivote]) {
+				i++;
+				int temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+		}
+		return i;
+	}
+	
+	
 	
 	
 	public void mergeSort(int[] arr, int left, int right) {
