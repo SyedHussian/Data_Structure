@@ -93,6 +93,7 @@ public class SortMain {
 //		sort.printArray(array);
 
 		
+<<<<<<< HEAD
 		//--------------------------- Quick Sorting ----------------//
 //		int array[] = {10, 3, 2, 7, 7, 5, 8, 4, 1, 2, 9, 7, 8, 11};
 //		
@@ -106,6 +107,10 @@ public class SortMain {
 		
 		//--------------------------- Heap Sorting ----------------//
 		int arr[] = {10, 3, 2, 5, 8, 4, 3, 1, 2, 9, 7, 8};
+=======
+		//---------------------------- Quick Sorting ----------------//
+		int array[] = {10, 3, 2, 7, 7, 5, 8, 4, 1, 2, 9, 7, 8, 11};
+>>>>>>> test
 		
 		System.out.println("User entered Array: ");
 		sort.printArray(arr);
