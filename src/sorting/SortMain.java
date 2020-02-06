@@ -94,15 +94,27 @@ public class SortMain {
 
 		
 		//--------------------------- Quick Sorting ----------------//
-		int array[] = {10, 3, 2, 7, 7, 5, 8, 4, 1, 2, 9, 7, 8, 11};
+//		int array[] = {10, 3, 2, 7, 7, 5, 8, 4, 1, 2, 9, 7, 8, 11};
+//		
+//		System.out.println("User entered Array: ");
+//		sort.printArray(array);
+//		
+//		sort.quickSort(array, 0, array.length-1);
+//		
+//		System.out.println("\n\nAfter sorting: ");
+//		sort.printArray(array);
+		
+		//--------------------------- Heap Sorting ----------------//
+		int arr[] = {10, 3, 2, 5, 8, 4, 3, 1, 2, 9, 7, 8};
 		
 		System.out.println("User entered Array: ");
-		sort.printArray(array);
+		sort.printArray(arr);
+		System.out.println("\n");
 		
-		sort.quickSort(array, 0, array.length-1);
+		sort.heapSort(arr);
 		
 		System.out.println("\n\nAfter sorting: ");
-		sort.printArray(array);
+		sort.printArray(arr);
 		
 	}
 	

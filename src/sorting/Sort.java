@@ -173,6 +173,17 @@ public class Sort {
 	}
 
 	
+	public void heapSort(int[] arr) {
+		heapByArray hba = new heapByArray(arr.length);
+		for (int i=0; i<arr.length; i++) {
+			hba.insertInHeap(arr[i]);
+		}
+		for (int i=0; i<arr.length; i++) {
+			arr[i] = hba.extractHeadOfHeap();
+		}
+	}
+
+	
 	
 	public void printArray(int arr[]) {
 		for (int i=0; i<arr.length; i++) {
