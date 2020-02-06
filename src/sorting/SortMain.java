@@ -93,7 +93,7 @@ public class SortMain {
 //		sort.printArray(array);
 
 		
-		//--------------------------- Quick Sorting ----------------//
+		//---------------------------- Quick Sorting ----------------//
 		int array[] = {10, 3, 2, 7, 7, 5, 8, 4, 1, 2, 9, 7, 8, 11};
 		
 		System.out.println("User entered Array: ");
