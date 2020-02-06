@@ -113,6 +113,49 @@ public class Sort {
 		
 	}
 	
+	
+	
+	public void mergeSort(int[] array, int left, int right) {
+		if (right > left) {
+			int middle = (left+right)/2;
+			mergeSort(array, left, middle);
+			mergeSort(array, middle+1, right);
+			merge(array, left, middle, right);
+		}
+	}
+	
+	public void merge(int[] array, int left, int middle, int right) {
+		int[] leftTempArray = new int[middle-left+2];
+		int[] rightTempArray = new int[right-middle+1];
+		
+		for (int i=0; i<=middle-left; i++) {
+			leftTempArray[i] = array[left+i];
+		}
+		for (int i=0; i<right-middle; i++) {
+			rightTempArray[i] = array[middle+1+i];
+		}
+		
+		leftTempArray[middle-left+1] = Integer.MAX_VALUE;
+		rightTempArray[right-middle] = Integer.MAX_VALUE;
+		
+		int i=0, j=0;
+		
+		for (int k=left; k<=right; k++) {
+			if (leftTempArray[i] < rightTempArray[j]) {
+				array[k] = leftTempArray[i];
+				i++;
+			}
+			else {
+				array[k] = rightTempArray[j];
+				j++;
+			}
+		}
+	}
+	
+	
+	
+	
+	
 	public void printArray(int arr[]) {
 		for (int i=0; i<arr.length; i++) {
 			System.out.println(arr[i]+" ");
